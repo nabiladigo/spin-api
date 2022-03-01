@@ -5,13 +5,16 @@ const Nav = (props) => {
     return (
         <div className="nav">
             <Link to="/">
-                <div>iStocks</div>
-            </Link>
-            <Link to="/Stocks">
-                <div>Stocks</div>
+                <div>Home</div>
             </Link>
             <Link to="/About">
                 <div>About</div>
+            </Link>
+            <Link to="/Stocks/:symbol">
+                <div>Stocks</div>
+            </Link>
+            <Link to="/Stocks">
+                <div>Dashboard</div>
             </Link>
         </div>
     );

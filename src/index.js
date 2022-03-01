@@ -2,11 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+import About from './pages/About';
+import Home from './pages/Home';
+import Stocks from './pages/Stocks';
+import Nav from './components/nav';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path='/' element={ < Home /> } />
+        <Route path='/stocks' element={ < Stocks />} >
+          <Route path=':symbol' element= { < Stocks />} />
+        </Route>
+        <Route path='/about' element = { <About />} />
+      </Routes>
+    </BrowserRouter>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

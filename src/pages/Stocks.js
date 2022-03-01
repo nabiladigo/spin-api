@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Dashboard from './Dashboard';
+import data from '../data';
+
 
 const Stocks = () => {
   return (
     <div>
-        <h1>Stocks</h1>
+        <Dashboard  
+        stock={data}
+        />
     </div>
   );
 };
